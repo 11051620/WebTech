@@ -1,0 +1,595 @@
+body {
+  font-family: 'DeStijl Regular', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'DeStijl Regular';
+  src: url('/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Fond/DeStijl Regular/DeStijl Regular.ttf') format('truetype');
+}
+
+
+#style-selector {
+  font-family: 'DeStijl Regular';
+  font-size: 16px;
+  padding: 10px ;
+  background-color: rgb(149, 141, 141);
+  color: #000;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+header {
+  text-align: right;
+  font-size: 60px; /* Change the font size */
+  margin-bottom: 60px; /* Adjust the spacing underneath */
+  margin-top: 60px;
+}
+
+nav {
+  background-color: white;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 5px; /* Space between items, adjust as necessary */
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 15px; /* Adjust padding to make the horizontal boxes bigger or smaller */
+  font-weight: bold;
+  border: 3px solid black;
+  color: black;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav li:nth-child(1) a {
+  background-color: red;
+}
+
+nav li:nth-child(2) a {
+  background-color: blue;
+  color: white; /* To make the text visible against the blue background */
+}
+
+nav li:nth-child(3) a {
+  background-color: yellow;
+}
+
+nav li:nth-child(4) a {
+  background-color: gray;
+  color: white; /* To make the text visible against the gray background */
+}
+
+nav li:nth-child(5) a {
+  background-color: white;
+}
+
+nav a:hover {
+  color: white;
+  background-color: black; /* Change the text and background colors on hover for a dynamic effect */
+}
+
+
+span.welcome {
+  color: red
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(58, 1fr);
+  grid-template-rows: repeat(58, calc(160vh / 58));
+}
+
+
+  .grid-home1 {
+      grid-area: 20 / 24 / 40 / 59;
+      border-top: 15px solid black;
+      border-bottom: 15px solid black;
+      border-left: 5px solid black;
+      padding: 5px;
+  }
+
+  .grid-home2 {
+    grid-area: 20 / 1 / 40 / 6;
+    display: flex;
+    flex-direction: column;
+    background-color: black;  /* Set the background color to black */
+    overflow: hidden;
+    height: 100%;
+}
+
+  .grid-home3 { /* Foto Stijl Gestner */
+      grid-area: 20 / 6 / 40 / 12;
+      display: flex;
+      flex-direction: column;
+      background-color: black;  /* Set the background color to black */
+      overflow: hidden;
+      height: 100%;
+  }
+
+  .grid-home4 { /* Foto Mondriaan */
+      grid-area: 20 / 12 / 40 / 18;     
+      display: flex;
+      flex-direction: column;
+      background-color: black;  /* Set the background color to black */
+      overflow: hidden;
+      height: 100%;
+  }
+
+  .grid-home5 { /* Foto Stijl Mondriaan*/
+      grid-area: 20 / 18 / 40 / 24;
+      display: flex;
+      flex-direction: column;
+      background-color: black;  /* Set the background color to black */
+      overflow: hidden;
+      height: 100%;
+
+      border-right: 5px solid black;
+  }
+
+  .grid-home6 {
+      display: grid; /* Turn it into a grid container */
+      grid-template-columns: repeat(58, 1fr); /* This is 45-28, because the grid area is 28 to 45 */
+      grid-template-rows: repeat(2, 1fr); /* This is 59-32, because the grid area is 32 to 59 */
+      grid-area: 1 / 1 / 20 / 59;
+      
+
+  }
+
+  .nested-grid1 {
+    grid-area: 1 / 1 / 3 / 24; /* Adjust these numbers as required */
+    border-right: 5px solid black;
+    background-color: red;
+}
+
+  .nested-grid2 {
+    grid-area: 1 / 24 / 3 / 59; /* Adjust these numbers as required */
+    border-left: 5px solid black;
+}
+
+  .grid-home7 {
+    display: grid; /* Turn it into a grid container */
+    grid-template-columns: repeat(58, 1fr); /* This is 45-28, because the grid area is 28 to 45 */
+    grid-template-rows: repeat(5, 1fr); /* This is 59-32, because the grid area is 32 to 59 */
+    grid-area: 40 / 1 / 59 / 59;     
+  }
+
+  .nested-grid3 {
+    grid-area: 1 / 1 / 6 / 6; /* Adjust these numbers as required */
+    border-right: 8px solid black;
+    background-color: yellow;
+}
+
+.nested-grid4 {
+    grid-area: 1 / 6 / 6 / 24; /* Adjust these numbers as required */
+    border-right: 5px solid black;
+}
+
+.nested-grid5 {
+  grid-area: 1 / 24 / 5 / 38; /* Adjust these numbers as required */
+  border-left: 6px solid black;
+  border-bottom: 10px solid black;
+  border-right: 10px solid black;
+  background-color: blue;
+}
+
+.nested-grid6 {
+  grid-area: 5 / 24 / 6 / 38; /* Adjust these numbers as required */
+  border-left: 5px solid black;
+  border-right: 10px solid black;
+}
+
+.nested-grid7 {
+  grid-area: 1 / 38 / 6 / 59; /* Adjust these numbers as required */
+}
+
+  .grid-home1 p {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+      .grid-home2 img {
+        width: 100%;        
+        height: calc(100% - 30px);   
+        object-fit: cover;
+        margin-top: 15px;   /* Create a black space at the top */
+        margin-bottom: 15px;  /* Create a black space at the bottom */
+        background-color: white; /* In case you want the space behind the image to be white */
+    }
+
+    .grid-home3 img {
+      width: 100%;        
+      height: 100%;
+      object-fit: cover;
+      margin-top: 15px;   /* Create a black space at the top */
+      margin-bottom: 15px;  /* Create a black space at the bottom */
+      background-color: white; /* In case you want the space behind the image to be white */
+  }
+
+  .grid-home4 img {
+    width: 100%;        
+    height: calc(100% - 30px);   
+    object-fit: cover;
+    margin-top: 15px;   /* Create a black space at the top */
+    margin-bottom: 15px;  /* Create a black space at the bottom */
+    background-color: white; /* In case you want the space behind the image to be white */
+}
+
+  .grid-home5 img{
+    width: 100%;        
+    height: calc(100% - 30px);   
+    object-fit: cover;
+    margin-top: 15px;   /* Create a black space at the top */
+    margin-bottom: 15px;  /* Create a black space at the bottom */
+    background-color: white; /* In case you want the space behind the image to be white */
+}
+
+  .line {
+    display: none;
+}
+
+/* ARTICLE OVERVIEW PAGE */
+
+
+.grid-item1 {
+  grid-area: 29 / 11 / 44 / 21;
+  overflow: hidden;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.grid-item2 {
+  grid-area: 44 / 11 / 59 / 21;
+  overflow: hidden;
+  border-right: 5px solid black;
+  border-left: 5px solid black
+}
+
+.grid-item3 {
+  grid-area: 44 / 1 / 59 / 11;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.grid-item4{
+  grid-area: 1 / 1 / 29 / 21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.grid-item5{
+  grid-area: 29 / 1 / 44 / 11;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.grid-item6{
+  grid-area: 36 / 49 / 48 / 59;
+  overflow: hidden;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.grid-item7{
+  grid-area: 48 / 49 / 59 / 59;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  overflow: hidden;
+  }
+
+.grid-item8{
+  grid-area: 48 / 39 / 59 / 49;
+  overflow: hidden; 
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.grid-item9{
+  grid-area: 36 / 39 / 48 / 49;
+  border: 5px solid black;
+}
+
+.grid-item10{
+  grid-area: 1 / 21 / 59 / 39;
+  display: grid; /* Turn it into a grid container */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(58, 1fr); 
+}
+
+.grid-item11{
+  grid-area: 1 / 39 / 36 / 59;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+  background-color: red;
+}
+
+.grid-item1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}  
+
+.grid-item6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item7 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nested-grid-blogs1 {
+  grid-area: 1 / 1 / 11 / 3; 
+  background-color: yellow;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.nested-grid-blogs2 {
+  grid-area: 11 / 1 / 29 / 2; 
+  border: 5px solid
+}
+
+.nested-grid-blogs3 {
+  grid-area: 11 / 2 / 29 / 3; 
+  border: 5px solid
+  
+}
+
+.nested-grid-blogs4 {
+  grid-area: 29 / 1 / 40 / 3; 
+  border: 5px solid black;
+}
+
+.nested-grid-blogs5 {
+  grid-area: 40 / 1 / 59 / 3; 
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+  background-color: blue;
+}
+
+   /* Articles */ 
+
+   .line2 {
+    display: none;
+}
+   .grid-container {
+    display: grid;
+    grid-template-columns: repeat(58, 1fr);
+    grid-template-rows: repeat(58, calc(80vh / 58));
+  }
+  
+  .grid-item {
+    font-family: 'DeStijl Regular';
+    font-size: 15px;
+    line-height: 1;
+    }
+  
+  .grid-item h2 {
+    font-family: 'BQ Regular', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  .grid-item.mainimg {
+    grid-area: 1 / 1 / 40 / 30;
+    border: 5px solid black;
+  }
+
+  .grid-item.mainimg, .grid-item.secimg, .grid-item.thiimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Add this */
+  }
+  
+  .grid-item.mainimg img, .grid-item.secimg img, .grid-item.thiimg img {
+    position: absolute; /* Add this */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .grid-item.secimg {
+    grid-area: 1 / 45 / 59 / 59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+  }
+
+  .grid-item.thiimg {
+    grid-area: 30 / 15 / 59 / 45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 10px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+  }
+
+  .grid-item.title {
+    grid-area: 40 / 1 / 50 / 15;
+    padding: 5px;
+    font-size: 25px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+  }
+
+  .grid-item.author {
+    grid-area: 50 / 1 / 59 / 15;
+    padding: 5px;
+    font-size: 20px;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .grid-item.excerpt {
+    grid-area: 40 / 15 / 59 / 30;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #FF0000;
+    color: white;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .grid-item.st1 {
+    grid-area: 1 / 1 / 29 / 14;
+  }
+
+  .grid-item.st2 {
+    grid-area: 1 / 15 / 30 / 30;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    background-color: yellow;
+  }
+
+  .grid-item.st3 {
+    grid-area: 1 / 30 / 30 / 45;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    background-color: yellow;
+  }
+
+  .grid-item.st4 {
+    grid-area: 1 / 46 / 29 / 59;
+  }
+
+  .grid-item.mt1 {
+    grid-area: 1 / 1 / 39 / 14;
+  }
+
+  .grid-item.mt2 {
+    grid-area: 1 / 16 / 39 / 29;
+  }
+
+  .grid-item.mt3 {
+    grid-area: 1 / 31 / 39 / 44;
+  }
+
+  .grid-item.mt4 {
+    grid-area: 1 / 46 / 39 / 59;
+  }
+
+  .grid-item.lt1 {
+    grid-area: 1 / 1 / 59 / 15;
+    padding: 5px;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .grid-item.lt2 {
+    grid-area: 1 / 15 / 59 / 30;
+    padding: 5px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .grid-item.lt3 {
+    grid-area: 1 / 30 / 59 / 45;
+    padding: 5px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .grid-item.lt4 {
+    grid-area: 1 / 45 / 59 / 59;
+    padding: 5px;
+    border-left: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+  
+  span.highlight-person.active {
+    color: #FF0000;
+  }
+
+  span.highlight-historicalperson.active {
+    color: #1eb160;
+  }
+
+  span.highlight-location.active {
+    color:#4169E1
+  }
+
+  span.highlight-politics.active {
+    color:pink
+  }
+
+/* ABOUT PAGE */
+
+.grid-about1 {
+  grid-area: 1 / 11 / 25 / 49;
+  border: 10px solid black
+}
+
+.grid-about1 p {
+  font-size: 26px;
+  line-height: 1;
+}
