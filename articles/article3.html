@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Articles</title>
+        <link rel="stylesheet" href="gridtest.css">
+        
+      </head>
+<body>
+
+    <!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+    <option value="gridtest.css">Theme1</option>
+    <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+    const styleSelector = document.getElementById('style-selector');
+    const link = document.querySelector('link[rel="stylesheet"]');
+
+    // When the page loads, apply the stored theme
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme) {
+            link.href = savedTheme;
+            styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+        }
+    });
+
+    // When a new theme is selected
+    styleSelector.addEventListener('change', () => {
+        const selectedStyle = styleSelector.value;
+        link.href = selectedStyle;
+
+        // Save the theme in localStorage
+        localStorage.setItem('selectedTheme', selectedStyle);
+    });
+</script>
+    <nav>
+        <ul>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+        </ul>
+    </nav>
+
+    <hr class="line">
+    <header>Article</header>  
+    
+    
+    
+    <main>
+    <div class="grid-container" id="9">
+        <div class="grid-item mainimg" id="9.1">
+            <img src="/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Images/collector1.jpg" alt="An image of Vladimir Lenin (center) during the Russian Revolution and resulting Russian Civil War(1917-1921), via Wellesley College">
+        </div>
+        <div class="grid-item title" id="9.2">Russian & Bolshevik Revolution vs Russian Civil War: What's the Difference?</div>
+        <div class="grid-item author" id="9.3">Owen Rust</div>
+        <div class="grid-item excerpt" id="9.4">There was great social and economic upheaval in Russia during the early 1900s as it became the Soviet Union. What happened, and when?</div>
+        <div class="grid-item lt3" id="9.5" data-text></div>
+        <div class="grid-item lt4" id="9.6" data-text></div>
+    </div>
+    
+    <hr class="line2">
+    
+    <div class="grid-container" id="10">
+        <div class="grid-item lt1" id="10.1" data-text></div>
+        <div class="grid-item lt2" id="10.2" data-text></div>
+        <div class="grid-item lt3" id="10.3" data-text></div>
+        <div class="grid-item secimg" id="10.4">
+            <img src="/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Images/collector2.jpg" alt="An image of Tsar Nicholas II, Russia's last royal ruler who abdicated the throne in 1917 during sociopolitical turmoil, via the Library of Congress, Washington DC">
+        </div>
+    </div>
+
+    <hr class="line2">
+
+    <div class="grid-container" id="11">
+        <div class="grid-item lt1" id="10.1" data-text></div>
+        <div class="grid-item st2" id="10.2" data-text></div>
+        <div class="grid-item st3" id="10.3" data-text></div>
+        <div class="grid-item lt4" id="10.4" data-text></div>
+        <div class="grid-item thiimg" id="10.5">
+            <img src="/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Images/collector3.jpg" alt="A picture of communist dictator Joseph Stalin, who ruled the Soviet Union from the late 1920s to his death in 1953, held by Russians in 2009 at a weath-laying ceremony, via Foreign Affairs">
+        </div>
+    </div>
+    
+    <hr class="line2">
+
+    <div class="grid-container" id="11">
+        <div class="grid-item lt1" id="11.1" data-text></div>
+        <div class="grid-item lt2" id="11.2" data-text></div>
+        <div class="grid-item lt3" id="11.3" data-text></div>
+        <div class="grid-item lt4" id="11.4" data-text></div>
+    </div>
+</main>
+
+    <br>
+    <hr class="line">
+
+      <script src="test.js"></script>
+    
+      <script>
+        let article3 = [        
+"During the 1800s, <span class=\"highlight-location\">Russia</span> wished to be an imperial power like <span class=\"highlight-location\">Britain</span>, <span class=\"highlight-location\">France</span>, and other <span class=\"highlight-location\">European</span> nations. However, it faced many weaknesses due to its ungovernable size, economic struggles, and poor leadership. The <span class=\"highlight-politics\">Russo-Japanese War</span> of 1904-05 was a surprising defeat for <span class=\"highlight-location\">Russia</span> at the hands of an <span class=\"highlight-location\">Asian</span> nation, which most Westerners had discounted as backward. <span class=\"highlight-location\">Russia</span>’s humiliation sparked a revolution that prompted some reforms from its royal leader, <span class=\"highlight-historicalperson\">Tsar Nicholas II</span>. A decade later brought <span class=\"highlight-politics\">World War I</span> and such devastation that a last revolution was launched. However, the revolution itself was only the first step–<span class=\"highlight-location\">Russia</span> would have to suffer through a brutal civil war before it became the <span class=\"highlight-politics\">Soviet Union</span>. Here’s a look at the <span class=\"highlight-politics\">Bolshevik Revolution</span> and the <span class=\"highlight-politics\">Russian Civil War</span>.<br>",
+"Life was hard for most people in <span class=\"highlight-location\">Europe</span> during the early 1800s. Income and social inequality were significant, political rights were few, and small aristocracies ruled over the masses. <span class=\"highlight-location\">German</span> political philosopher <span class=\"highlight-historicalperson\">Karl Marx</span>, along with his colleague <span class=\"highlight-historicalperson\">Friedrich Engels</span>, wrote a pamphlet criticizing capitalism for exploiting workers. This <span class=\"highlight-politics\">Communist Manifesto</span>, published in 1848, argued that the government should control the means of production to prevent the exploitation of labor.<br>",
+"<span class=\"highlight-historicalperson\">Marx</span> believed that capitalism was the natural evolution of feudalism, which had existed in <span class=\"highlight-location\">Europe</span> hundreds of years earlier. In <span class=\"highlight-location\">Russia</span>, millions of serfs had lived as feudal peasants until 1861, and <span class=\"highlight-historicalperson\">Marx</span> argued that only evolution toward socialism, and eventually communism, would make them prosperous, equal citizens. He believed that industrialized societies like <span class=\"highlight-location\">Britain</span> and the <span class=\"highlight-location\">United States</span> would eventually undergo socialist revolutions that saw the proletariat, or working class, rise up and overthrow the capitalists. A new society where workers governed themselves and owned the means of production would be created.<br>",
+"Like its <span class=\"highlight-location\">European</span> cohorts, <span class=\"highlight-location\">Russia</span> was an imperial power in the late 1800s and sought to control territory beyond its borders. <span class=\"highlight-location\">Northeastern Asia</span>, particularly the <span class=\"highlight-location\">Manchuria</span> region of <span class=\"highlight-location\">China</span> and the <span class=\"highlight-location\">Korean peninsula</span>, was a desirable area of control for <span class=\"highlight-location\">Russia</span> due to its rich resources and close geographic proximity. Unfortunately for <span class=\"highlight-location\">Russia</span>, <span class=\"highlight-location\">Japan</span> also desired this territory, leading to conflict between the two growing powers. In February 1904, <span class=\"highlight-location\">Japan</span> surprised <span class=\"highlight-location\">Russia</span> with an attack on <span class=\"highlight-location\">Port Arthur</span>–a <span class=\"highlight-location\">Russian</span> naval base–in <span class=\"highlight-location\">Manchuria</span>, sparking the <span class=\"highlight-politics\">Russo-Japanese War</span>.<br>",
+"<span class=\"highlight-location\">Russia</span>’s unexpectedly poor performance in the war, coupled with economic woes, resulted in the <span class=\"highlight-politics\">Russian Revolution of 1905</span>. Protests quickly spread throughout <span class=\"highlight-location\">Russia</span> following the initial violent repression of demonstrations. International news was made by the famous <span class=\"highlight-politics\">Potemkin Mutiny</span>, in which poorly-treated <span class=\"highlight-location\">Russian</span> sailors seized control of the ship <span class=\"highlight-politics\">Potemkin</span> and sailed it to <span class=\"highlight-location\">Odessa, Ukraine</span>. Sympathy for the mutineers prompted widespread unrest in <span class=\"highlight-location\">Odessa</span>, which descended into riots by July 29, 1905. Other <span class=\"highlight-location\">Russian</span> naval ships joined the mutiny in early July after being dispatched to the <span class=\"highlight-location\">Black Sea</span> to force the surrender of the <span class=\"highlight-politics\">Potemkin</span>. By late 1905, <span class=\"highlight-historicalperson\">Tsar Nicholas II</span> was forced to adopt some pro-democratic reforms, resulting in the <span class=\"highlight-politics\">Russian Constitution of 1906</span>. This created a bicameral legislature that would share power with the <span class=\"highlight-historicalperson\">Tsar</span>.<br>",
+            
+"Despite the new constitution, the <span class=\"highlight-historicalperson\">Tsar</span> still held most executive power in <span class=\"highlight-location\">Russia</span>. Since the 1890s, <span class=\"highlight-location\">Russia</span> had become part of a system of alliances with <span class=\"highlight-location\">France</span> and <span class=\"highlight-location\">Britain</span> to counteract the growing power of a newly-unified <span class=\"highlight-location\">Germany</span>. The idea was that <span class=\"highlight-location\">Russia</span> would be able to attack <span class=\"highlight-location\">Germany</span> from the east while <span class=\"highlight-location\">Britain</span> and <span class=\"highlight-location\">France</span> attacked from the west, forcing a quick end to any conflict in central <span class=\"highlight-location\">Europe</span>. <span class=\"highlight-location\">Serbia</span> was also an ally of <span class=\"highlight-location\">Russia</span>, and when the assassination of Austrian archduke <span class=\"highlight-historicalperson\">Franz Ferdinand</span> in July 1914 sparked a war between German ally <span class=\"highlight-location\">Austria-Hungary</span> and <span class=\"highlight-location\">Serbia</span>, <span class=\"highlight-location\">Russia</span> became officially embroiled in World War I.<br>",
+"The war did not go well for <span class=\"highlight-location\">Russia</span>. <span class=\"highlight-location\">Germany</span> itself was part of a system of alliances, bringing <span class=\"highlight-location\">Russia</span> into conflict with the <span class=\"highlight-location\">Ottoman Empire</span> as well as <span class=\"highlight-location\">Germany</span> and adjacent <span class=\"highlight-location\">Austria-Hungary</span>. <span class=\"highlight-location\">Russia</span> had the weakest per-capita economy of the European powers and had faced an economic recession after the Russo-Japanese War and Revolution of 1905, from which it had only recently begun recovering. Although it performed well against the armies of <span class=\"highlight-location\">Austria-Hungary</span> and the <span class=\"highlight-location\">Ottoman Empire</span>, it suffered at the hands of the more modern <span class=\"highlight-location\">German</span> military. By 1917, the high material demands of the War, which had bogged down into a stalemate on both the Western Front in <span class=\"highlight-location\">France</span> and the Eastern Front in eastern <span class=\"highlight-location\">Europe</span>, were again hurting the <span class=\"highlight-location\">Russian</span> economy.<br>",
+"Poor performance in the War beginning in 1915 reflected poorly on <span class=\"highlight-historicalperson\">Tsar Nicholas II</span>, who was the commander-in-chief of <span class=\"highlight-location\">Russia</span>’s large, but less modern, military. By March 1917, other military leaders convinced <span class=\"highlight-historicalperson\">Nicholas</span> to abdicate the throne to calm growing unrest in major cities. The <span class=\"highlight-historicalperson\">Tsar</span>’s family was placed under house arrest, and a Provisional Government took control of <span class=\"highlight-location\">Russia</span>. Composed mostly of elites, the Provisional Government chose to continue <span class=\"highlight-location\">Russia</span>’s participation in World War I.<br>",
+"<span class=\"highlight-location\">Germany</span> noticed the growing civil unrest in <span class=\"highlight-location\">Russia</span> and decided to send radical <span class=\"highlight-location\">Russian</span> exile <span class=\"highlight-historicalperson\">Vladimir Lenin</span>, along with several other exiles, back to <span class=\"highlight-location\">Russia</span> via train. If these exiles returned to encourage revolution, <span class=\"highlight-location\">Russia</span> might be unable to carry on the war. In April 1917, <span class=\"highlight-historicalperson\">Lenin</span> traveled back to <span class=\"highlight-location\">Russia</span> from <span class=\"highlight-location\">Zurich, Switzerland</span>, arriving in <span class=\"highlight-location\">Russian</span>-controlled <span class=\"highlight-location\">Finland</span>. Quickly, he received a warm welcome from <span class=\"highlight-location\">Russian</span> soldiers and peasants and promised to end the war. He took up residence in <span class=\"highlight-location\">Petrograd, Russia</span>, which would later be renamed <span class=\"highlight-location\">Leningrad</span>.<br>",
+"On November 7, 1917, <span class=\"highlight-historicalperson\">Lenin</span>’s new <span class=\"highlight-politics\">Bolshevik Party</span> seized power in <span class=\"highlight-location\">Petrograd</span>, which was <span class=\"highlight-location\">Russia</span>’s capital at the time. Due to a difference between calendar systems, this became known as the October Revolution. Suffering from the war, a majority of the city’s industrial workers and peasants sided with the <span class=\"highlight-politics\">Bolsheviks</span>, who promised to abolish private property and disburse food and resources from <span class=\"highlight-location\">Russia</span>’s unpopular nobles among the common people. Rampant food shortages made the <span class=\"highlight-politics\">Bolshevik</span> slogan “Peace, Land, and Bread” especially popular.<br>",
+
+"The Provisional Government, widely seen as ineffective, was immediately overthrown. The <span class=\"highlight-politics\">Bolsheviks</span> replaced it with their own and began implementing socialist ideals like minimum wage, labor-hour, and criminal justice reforms. In December, the new <span class=\"highlight-politics\">Bolshevik</span> government signed an armistice with the Central Powers of <span class=\"highlight-location\">Germany</span>, <span class=\"highlight-location\">Austria-Hungary</span>, and the <span class=\"highlight-location\">Ottoman Empire</span>. The rapid <span class=\"highlight-politics\">Bolshevik Revolution</span>, also known as the <span class=\"highlight-politics\">Russian Revolution</span> and <span class=\"highlight-politics\">Communist Revolution</span>, resulted in <span class=\"highlight-location\">Russia</span>’s official departure from World War I the following spring.<br>",
+"In March 1918, a peace treaty was finalized between <span class=\"highlight-location\">Germany</span> and <span class=\"highlight-location\">Russia</span>’s new <span class=\"highlight-politics\">Bolshevik government</span>. The treaty gave <span class=\"highlight-location\">Germany</span> significant amounts of <span class=\"highlight-location\">Russian</span> territory but bought <span class=\"highlight-historicalperson\">Vladimir Lenin</span>’s fledgling government some breathing room to build a new society. However, it upset <span class=\"highlight-location\">Russia</span>’s allies in the War–<span class=\"highlight-location\">Britain</span>, <span class=\"highlight-location\">France</span>, and the <span class=\"highlight-location\">United States</span>. <span class=\"highlight-location\">Russia</span>’s “separate peace” was criticized as giving <span class=\"highlight-location\">Germany</span> an opportunity to increase its war efforts on the Western Front, which it quickly did. Mere weeks after the Treaty of Brest-Litovsk was finalized, <span class=\"highlight-location\">Germany</span> launched the Spring Offensive in <span class=\"highlight-location\">France</span>.<br>",
+"<span class=\"highlight-location\">Russia</span>’s harsh peace created political rifts among the <span class=\"highlight-politics\">Bolsheviks</span>. When World War I ended that November, <span class=\"highlight-location\">Russia</span> was not given its territory back from <span class=\"highlight-location\">Germany</span>. This intensified geopolitical tensions between <span class=\"highlight-location\">Russia</span>’s new communist leaders and the West. <span class=\"highlight-location\">Russia</span> did not participate in the Treaty of Versailles and was not invited to join the new League of Nations. As land taken from <span class=\"highlight-location\">Russia</span> began to form new republics after World War I, the international body–which supported this formation–was viewed with hostility by the communists.<br>",
+"The Treaty of Brest-Litovsk was signed by <span class=\"highlight-location\">Russia</span>’s new communist leaders…but these leaders only fully controlled the cities of <span class=\"highlight-location\">Petrograd (St. Petersburg)</span> and <span class=\"highlight-location\">Moscow</span>. <span class=\"highlight-location\">Russia</span>’s vast size meant many opponents of the new <span class=\"highlight-politics\">Bolsheviks</span> had time and space to plan resistance. Some parts of Imperial <span class=\"highlight-location\">Russia</span> declared independence, such as <span class=\"highlight-location\">Finland</span>. The <span class=\"highlight-politics\">Bolsheviks</span>, or communists, looked to crush these independence movements and exert their control over all of <span class=\"highlight-location\">Russia</span>. They became known as “the Reds.”<br>",
+"The communists were split in 1918, with <span class=\"highlight-politics\">Mensheviks</span> serving as a more moderate faction of socialists than the <span class=\"highlight-politics\">Bolsheviks</span>. This split likely encouraged the resistance of anti-communists, who struck on July 5, 1918. However, initial successful strikes against the <span class=\"highlight-politics\">Bolshevik government</span> by anti-communists were uncoordinated. The <span class=\"highlight-politics\">Bolsheviks</span> successfully counterattacked and eliminated many “White” (anti-communist) opponents, including executing the royal family of <span class=\"highlight-historicalperson\">Tsar Nicholas II</span> on July 17. The divided country fell into a full-scale civil war.<br>",
+
+"With World War I still ongoing, the descent of <span class=\"highlight-location\">Russia</span> into chaos alarmed the remaining Allied powers. <span class=\"highlight-location\">Britain</span> and the <span class=\"highlight-location\">United States</span> were alarmed by communism but especially wanted to prevent <span class=\"highlight-location\">Germany</span> from taking advantage of <span class=\"highlight-location\">Russia</span>’s instability. Ideally, Allied aid would let the Whites defeat the Reds and end the civil war, preventing the possibility of <span class=\"highlight-location\">Germany</span> rushing in and seizing the resources of a failed state. Unfortunately for the Whites, Allied aid was not unified and was distributed across many distant ports. Much of it was defensive in nature, either intended to prevent <span class=\"highlight-location\">German</span> seizure or to keep <span class=\"highlight-location\">Germany</span> wary of moving all of its troops to the Western front.<br>",
+"Ultimately, various Allied nations, including <span class=\"highlight-location\">Britain</span> and the <span class=\"highlight-location\">United States</span>, contributed far too few troops to provide meaningful military assistance to the Whites. Diplomatic limitations prevented most American and British forces from engaging in active warfare against the Reds, especially since many of the Reds had been allies during World War I. The US Army 339th Regiment, nicknamed the “Polar Bears,” ended up fighting heated battles against the Reds in late 1918 and early 1919. Later, American troops remained in <span class=\"highlight-location\">Siberia</span> (northeastern <span class=\"highlight-location\">Russia</span>) to prevent <span class=\"highlight-location\">Japan</span>, with much larger armies in the area, from seizing the region. In January 1920, US president <span class=\"highlight-historicalperson\">Woodrow Wilson</span> finally ordered the withdrawal of American troops from <span class=\"highlight-location\">Russia</span>.<br>",
+"White forces advanced in 1918 and 1919, coming close to retaking major <span class=\"highlight-location\">Russian</span> cities like <span class=\"highlight-location\">Petrograd</span> and <span class=\"highlight-location\">Moscow</span>. However, they failed to retake these population centers, leaving the Reds able to raise much larger armies. Although the Whites were often competently led and even well-supplied, they were not ideologically unified, resulting in them being less effective than the highly-motivated and ideologically united Reds. The Reds formed a single powerful faction, while the Whites were composed of many different groups that could lose motivation to continue active fighting.<br>",
+"In November 1920, the Reds won the <span class=\"highlight-politics\">Russian Civil War</span> in <span class=\"highlight-location\">Europe</span> by defeating the unified White leader, <span class=\"highlight-historicalperson\">Piotr Wrangel</span>. Wrangel, emboldened by Red Russian defeats in their attempts to spread into <span class=\"highlight-location\">Poland</span> and <span class=\"highlight-location\">Ukraine</span> earlier in the fall, held out hope for a White victory even as the <span class=\"highlight-location\">British</span> urged him to negotiate with the Reds for an end to the fighting. Despite the advantage of Western heavy weapons, including tanks, Wrangel’s forces were defeated by Red numerical advantage: the Reds outnumbered the Whites five-to-one on the battlefield. On November 13, Wrangel evacuated his forces and a few civilians to <span class=\"highlight-location\">Turkey</span>. Two years later, the final White forces in far east <span class=\"highlight-location\">Russia</span>, in the city of <span class=\"highlight-location\">Vladivostok</span>, surrendered.<br>",
+"The victory of the Reds in the <span class=\"highlight-politics\">Russian Civil War</span> resulted in the creation of the Union of Soviet Socialist Republics (<span class=\"highlight-politics\">USSR</span>), with soviet referring to “workers’ councils.” The <span class=\"highlight-politics\">USSR</span> was colloquially known as the <span class=\"highlight-politics\">Soviet Union</span>, and its formal establishment date was December 30, 1922. In the early 1920s, the <span class=\"highlight-politics\">USSR</span> was economically devastated from years of warfare, beginning with World War I and including the <span class=\"highlight-politics\">Russian Civil War</span>. Quickly, the <span class=\"highlight-politics\">USSR</span> utilized central planning to organize economic production and industrialize rapidly. Under <span class=\"highlight-historicalperson\">Vladimir Lenin</span>, the <span class=\"highlight-politics\">Soviet Union</span> developed a strict top-down leadership policy with little room for local political independence.<br>",
+"<span class=\"highlight-historicalperson\">Lenin</span>’s death in 1924 resulted in the rise of <span class=\"highlight-historicalperson\">Joseph Stalin</span> as his iron-fisted successor. By the late 1920s, <span class=\"highlight-historicalperson\">Stalin</span> was the undisputed leader of the <span class=\"highlight-politics\">USSR</span>. His dictatorial rule between the late 1920s and his death in 1953 has influenced most of the West’s view of the <span class=\"highlight-politics\">Soviet Union</span>, with popular imagery including intense militarism, massive factories, and drab living conditions. However, the perceived radicalism of communism during the <span class=\"highlight-politics\">Russian Civil War</span> waned in the West during the early 1930s, and the <span class=\"highlight-politics\">USSR</span> was both invited into the <span class=\"highlight-politics\">League of Nations</span> and re-established diplomatic relations with the <span class=\"highlight-location\">United States</span>. Later, the two nations would find themselves locked into a tense <span class=\"highlight-politics\">Cold War</span> between 1946 and 1989 as both superpowers attempted to spread their desired culture and form of government to other nations.<br>"
+
+
+];
+insertArticleText(article3);
+      </script>
+
+
+      <table id="metadataTable">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+    
+    
+
+    <div id="metadataViewer">
+        <label><input type="checkbox" id="personsCheckbox"> Persons</label>
+        <label><input type="checkbox" id="historicalPersonsCheckbox"> Historical Persons</label>
+        <label><input type="checkbox" id="locationsCheckbox"> Locations</label>
+        <label><input type="checkbox" id="politicsCheckbox"> Politics</label>
+        <button onclick="highlightMetadata()">Highlight</button>
+    </div>  
+    </body>
+    
+</html>

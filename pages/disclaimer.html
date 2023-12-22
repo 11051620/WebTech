@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <link rel="stylesheet" type="text/css" href="gridtest.css">
+</head>
+
+  <body>
+      <nav>
+        <ul>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+
+    <hr class="line">  
+    <header>
+    Disclaimer
+    </header>    
+
+<!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+  <option value="gridtest.css">Theme1</option>
+  <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+  const styleSelector = document.getElementById('style-selector');
+  const link = document.querySelector('link[rel="stylesheet"]');
+
+  // When the page loads, apply the stored theme
+  window.addEventListener('DOMContentLoaded', (event) => {
+      const savedTheme = localStorage.getItem('selectedTheme');
+      if (savedTheme) {
+          link.href = savedTheme;
+          styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+      }
+  });
+
+  // When a new theme is selected
+  styleSelector.addEventListener('change', () => {
+      const selectedStyle = styleSelector.value;
+      link.href = selectedStyle;
+
+      // Save the theme in localStorage
+      localStorage.setItem('selectedTheme', selectedStyle);
+  });
+</script>
+
+<p>The purpose of this web site is to explore various types of typographic and
+  layout style for text documents, as an end-of-course project for the "Information
+  Modeling and Web technologies" course of the Master Degree in Digital Humanities
+  and Digital Knowledge of the University of Bologna, under prof. Fabio Vitali.
+  The documents contained in this web site have been selected for their length and
+  complexity from. Their publication here is not intended to be an alternative or
+  replace their original locations:</p>
+
+  <p>
+    For more information, please refer to our articles:
+    <a href="https://www.theguardian.com/books/2017/may/06/russian-revolution-matter-china-mieville" target="_blank">Article 1</a>,
+    <a href="https://daily.jstor.org/the-birth-of-the-soviet-union-and-the-death-of-the-russian-revolution/" target="_blank">Article 2</a>,
+    <a href="https://www.thecollector.com/russian-bolshevik-russian-civil-war-whats-the-difference/" target="_blank">Article 3</a>.
+  </p>
+
+<p>All copyrights and related rights on the content remain with their original owners.</p>
+<p>All copyright on the typographic and layout choices are 2023 © XY</p>
+
+</body>

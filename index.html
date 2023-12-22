@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grid Example</title>
+  <link rel="stylesheet" type="text/css" href="gridtest.css">
+</head>
+
+
+<body>
+ 
+    <nav>
+        <ul>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+     
+  <hr class="line">
+  <header>Home</header>   
+
+
+<!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+  <option value="gridtest.css">Theme1</option>
+  <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+  const styleSelector = document.getElementById('style-selector');
+  const link = document.querySelector('link[rel="stylesheet"]');
+
+  // When the page loads, apply the stored theme
+  window.addEventListener('DOMContentLoaded', (event) => {
+      const savedTheme = localStorage.getItem('selectedTheme');
+      if (savedTheme) {
+          link.href = savedTheme;
+          styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+      }
+  });
+
+  // When a new theme is selected
+  styleSelector.addEventListener('change', () => {
+      const selectedStyle = styleSelector.value;
+      link.href = selectedStyle;
+
+      // Save the theme in localStorage
+      localStorage.setItem('selectedTheme', selectedStyle);
+  });
+</script>
+
+
+  <div class="grid-container-gen">
+    <div class="grid-home1">
+      <p><span class="welcome">Welcome to our website!</span> We are excited to present a collection of three articles exploring the captivating history, culture, and impact of the Soviet Union.</p>
+      <p> This site was created as part of a Digital Humanities project. Immerse yourself in the insightful content, gaining a deeper understanding of this remarkable chapter in history. The site's theme can be customized to enhance your browsing experience. Choose Piet Mondriaan or Karl Gestner to experience the website styled in their iconic artistic vision. Feel free to explore and engage with our content. Enjoy your visit!</p>
+    </div>
+    <div class="grid-home2">
+      <img src="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/Images/gertner2.jpg" alt="Lenin">
+    </div>
+    <div class="grid-home3">
+      <img src="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/Images/karl2.jpg" alt="Lenin">
+    </div>
+    <div class="grid-home4">
+      <img src="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/Images/mondriaan1.jpg" alt="Lenin">
+    </div>
+    <div class="grid-home5">
+      <img src="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/Images/destijl.jpg" alt="Lenin">
+    </div>
+    <div class="grid-home6">
+      <div class="nested-grid1"></div>
+      <div class="nested-grid2"></div>
+    </div>
+    <div class="grid-home7">
+      <div class="nested-grid3"></div>
+      <div class="nested-grid4"></div>
+      <div class="nested-grid5"></div>
+      <div class="nested-grid6"></div>
+      <div class="nested-grid7"></div>
+    </div>
+
+  </div>
+  <br>
+  <hr class="line">
+    <footer>
+      <p>Disclaimer: This is a brief statement. For full details, see our <a href="disclaimer.html">Disclaimer page</a>.</p>
+    </footer>
+  
+  </body>
+</html>

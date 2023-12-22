@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="gridtest.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  <style>
+    #map { height: 480px;}
+  </style>
+</head>
+
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+      <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+      <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+      <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+      <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+    </ul>
+  </nav>
+ 
+<hr class="line">
+<header>Map</header>
+
+<!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+  <option value="gridtest.css">Theme1</option>
+  <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+  const styleSelector = document.getElementById('style-selector');
+  const link = document.querySelector('link[rel="stylesheet"]');
+
+  // When the page loads, apply the stored theme
+  window.addEventListener('DOMContentLoaded', (event) => {
+      const savedTheme = localStorage.getItem('selectedTheme');
+      if (savedTheme) {
+          link.href = savedTheme;
+          styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+      }
+  });
+
+  // When a new theme is selected
+  styleSelector.addEventListener('change', () => {
+      const selectedStyle = styleSelector.value;
+      link.href = selectedStyle;
+
+      // Save the theme in localStorage
+      localStorage.setItem('selectedTheme', selectedStyle);
+  });
+</script>
+  <div id="map"></div>      
+
+  <script>
+      // Initialize the map, set its view to a given geographical coordinates and a zoom level
+      var map = L.map('map').setView([55.7555, 37.6], 5);
+
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+      // Add a marker to the map
+
+
+
+// Adding markers
+
+// Russia
+L.marker([62.0, 95.0]).addTo(map)
+.bindPopup("<b>Russia</b><br>Heartland of the Soviet Union.");
+
+// Germany
+L.marker([51.1657, 10.4515]).addTo(map)
+.bindPopup("<b>Germany</b><br>Involved in the Treaty of Brest-Litovsk.");
+
+// Port Arthur
+L.marker([38.8147, 121.2656]).addTo(map)
+.bindPopup("<b>Port Arthur</b><br>Site of a major Russo-Japanese war battle.");
+
+// Odessa
+L.marker([46.4825, 30.7233]).addTo(map)
+.bindPopup("<b>Odessa</b><br>Important port city in southern Russia.");
+
+// Ukraine
+L.marker([48.3794, 31.1656]).addTo(map)
+.bindPopup("<b>Ukraine</b><br>Site of significant revolutionary activity and battles.");
+
+// Georgia
+L.marker([42.3154, 43.3569]).addTo(map)
+.bindPopup("<b>Georgia</b><br>Briefly independent before Soviet annexation.");
+
+// Armenia
+L.marker([40.0691, 45.0382]).addTo(map)
+.bindPopup("<b>Armenia</b><br>Joined the Soviet Union after WWI.");
+
+// Azerbaijan
+L.marker([40.1431, 47.5769]).addTo(map)
+.bindPopup("<b>Azerbaijan</b><br>Rich in oil, of strategic importance.");
+
+// Moscow
+L.marker([55.7558, 37.6173]).addTo(map)
+.bindPopup("<b>Moscow</b><br>Capital of Soviet Russia.");
+
+// Tiflis (now known as Tbilisi)
+L.marker([41.7151, 44.8271]).addTo(map)
+.bindPopup("<b>Tiflis</b><br>Important center in the Caucasus.");
+
+// Belarus
+L.marker([53.7098, 27.9534]).addTo(map)
+.bindPopup("<b>Belarus</b><br>Site of various revolutionary activities.");
+
+// United States
+L.marker([37.0902, -95.7129]).addTo(map)
+.bindPopup("<b>United States</b><br>Played a role in international relations during the revolution.");
+
+// Kyiv
+L.marker([50.4501, 30.5234]).addTo(map)
+.bindPopup("<b>Kyiv</b><br>Key city in Ukraine with significant events.");
+
+// Petrograd/St Petersburg
+L.marker([59.9343, 30.3351]).addTo(map)
+.bindPopup("<b>Petrograd</b><br>Former capital during the Russian Revolution.");
+
+// Kharkiv
+L.marker([49.9935, 36.2304]).addTo(map)
+.bindPopup("<b>Kharkiv</b><br>Another significant city in Ukraine.");
+
+// Caucasus
+L.marker([42.5462, 43.3784]).addTo(map)
+.bindPopup("<b>Caucasus</b><br>Region of significant geopolitical importance.");
+
+// Tbilisi
+L.marker([41.7151, 44.8271]).addTo(map)
+.bindPopup("<b>Tbilisi</b><br>Center of revolutionary activities in Georgia.");
+
+// Orlando (I assume this is not the US city, so I'll skip it)
+
+// Britain
+L.marker([55.3781, -3.4360]).addTo(map)
+.bindPopup("<b>Britain</b><br>Involved in international policies during the revolution.");
+
+// France
+L.marker([48.8566, 2.3522]).addTo(map)
+.bindPopup("<b>France</b><br>Played a role in WWI and its aftermath.");
+
+// Japan
+L.marker([36.2048, 138.2529]).addTo(map)
+.bindPopup("<b>Japan</b><br>Engaged in the Russo-Japanese War.");
+
+// Manchuria
+L.marker([47.1216, 129.5078]).addTo(map)
+.bindPopup("<b>Manchuria</b><br>Region of geopolitical interest between Russia and Japan.");
+
+// Serbia
+L.marker([44.0165, 21.0059]).addTo(map)
+.bindPopup("<b>Serbia</b><br>Involved in the events leading up to WWI.");
+
+// Finland
+L.marker([61.9241, 25.7482]).addTo(map)
+.bindPopup("<b>Finland</b><br>Declared independence from Russia in 1917.");
+
+// Odessa
+L.marker([46.4825, 30.7233]).addTo(map)
+.bindPopup("<b>Odessa</b><br>Important port city in southern Russia.");
+
+// Leningrad (now known as Saint Petersburg)
+L.marker([59.9343, 30.3351]).addTo(map)
+.bindPopup("<b>Leningrad</b><br>Renamed in honor of Lenin.");
+
+// Zurich
+L.marker([47.3769, 8.5417]).addTo(map)
+.bindPopup("<b>Zurich</b><br>Lenin lived here before returning to Russia.");
+
+// Siberia
+L.marker([60.1282, 91.6768]).addTo(map)
+.bindPopup("<b>Siberia</b><br>Expansive region, site of many exiles.");
+
+// Poland
+L.marker([51.9194, 19.1451]).addTo(map)
+.bindPopup("<b>Poland</b><br>Regained independence after WWI.");
+
+// Vladivostok
+L.marker([43.1151, 131.8855]).addTo(map)
+.bindPopup("<b>Vladivostok</b><br>Major Russian port city near the Pacific.");
+
+// Turkey
+L.marker([38.9637, 35.2433]).addTo(map)
+.bindPopup("<b>Turkey</b><br>Key player in the geopolitics of the region.");
+
+
+  </script>
+
+  <br>
+  <hr class="line">
+    <footer>
+      <p>Copyright © 2023 My Company</p>
+    </footer>
+  
+  </body>
+</html>

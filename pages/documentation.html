@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Documentation</title>
+        <link rel="stylesheet" href="gridtest.css">
+        
+      </head>
+<body>
+
+    <!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+    <option value="gridtest.css">Theme1</option>
+    <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+    const styleSelector = document.getElementById('style-selector');
+    const link = document.querySelector('link[rel="stylesheet"]');
+
+    // When the page loads, apply the stored theme
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme) {
+            link.href = savedTheme;
+            styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+        }
+    });
+
+    // When a new theme is selected
+    styleSelector.addEventListener('change', () => {
+        const selectedStyle = styleSelector.value;
+        link.href = selectedStyle;
+
+        // Save the theme in localStorage
+        localStorage.setItem('selectedTheme', selectedStyle);
+    });
+</script>
+
+<body>
+    <nav>
+        <ul>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+        </ul>
+    </nav>
+
+    <hr class="line">
+    <header>Documentation</header>  
+
+
+    <div class="grid-container-gen">
+      <div class="grid-about1">
+        <h1>De Stijl</h1>
+        <p>Intro</p>
+        <h2>Fonts</h2>
+        <p>The 'DeStijl Regular' font is a nod to the typefaces used in De Stijl art. These fonts typically feature strong, straight lines and rigid angles, mirroring the art movement's emphasis on geometric abstraction. The use of such a font in this website design immediately evokes the essence of De Stijl, characterized by its minimalist yet bold aesthetic.</p>
+        <h2>Layout</h2>
+        <p>The layout in De Stijl art is characterized by asymmetric balance, achieved through the use of straight lines and right angles to create non-representational forms. Your website's layout reflects this through the use of grid-based designs with clean, horizontal, and vertical lines. These grids are used to organize content in a way that is both aesthetically pleasing and functionally effective, staying true to the movement's principles of simplicity and geometric harmony.</p>
+        <h2>Color Scheme</h2>
+        <p>De Stijl's color palette is famously limited to primary colors (red, blue, and yellow), along with black and white. This limited color scheme was part of the movement's pursuit of simplicity and essence in art. The use of these colors in this website design not only pays homage to this artistic movement but also allows for a striking, high-contrast visual experience. The colors can be used to highlight different sections of the website, draw attention to key elements, or create a sense of balance and harmony.</p>
+      </div>
+      <div class="grid-about2">
+        <h1>Karl Gestner</h1>
+        <p>Intro</p>
+        <h2>Fonts</h2>
+        <p>'BQ Regular' is reminiscent of the Swiss Design’s preference for sans-serif typefaces, known for their readability and simplicity. Swiss Design often employs typography as a primary design element, so the choice of a clean, legible font like 'BQ Regular' was essential. This font contributes to a sense of clarity and objectivity on your website, aligning with Swiss Design’s ethos of functional beauty.</p>
+        <h2>Layout</h2>
+        <p>Karl Gerstner was a proponent of grid-based design systems, which are fundamental to Swiss Design. This website's layout, inspired by the Gerstner Grid, uses a systematic grid to organize content. This approach promotes a clean, aligned, and orderly arrangement of elements, ensuring a balanced and harmonious composition. The grid helps in creating a visually appealing and easily navigable website, reflecting the Swiss Design's emphasis on practicality and precision.</p>
+        <h2>Color Scheme</h2>
+        <p>Swiss Design, and by extension, Karl Gerstner's work, is known for its minimalistic approach to color. The color scheme is likely to be understated, using monochromatic or muted tones to create a clean, modern look. The focus is on functionality and content, so the color scheme would be designed to enhance readability and user experience, rather than to dominate or distract.</p>
+      </div>
+    
+    </div>
+
+
+    <br>
+    <hr class="line">
+      <footer>
+        <p>Copyright © 2023 My Company</p>
+      </footer>
+</body>
+</html>
+

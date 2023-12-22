@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Articles</title>
+        <link rel="stylesheet" href="gridtest.css">
+        
+      </head>
+<body>
+
+    <!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+    <option value="gridtest.css">Theme1</option>
+    <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+    const styleSelector = document.getElementById('style-selector');
+    const link = document.querySelector('link[rel="stylesheet"]');
+
+    // When the page loads, apply the stored theme
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme) {
+            link.href = savedTheme;
+            styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+        }
+    });
+
+    // When a new theme is selected
+    styleSelector.addEventListener('change', () => {
+        const selectedStyle = styleSelector.value;
+        link.href = selectedStyle;
+
+        // Save the theme in localStorage
+        localStorage.setItem('selectedTheme', selectedStyle);
+    });
+</script>
+    <nav>
+        <ul>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+        </ul>
+    </nav>
+
+    <hr class="line">
+    <header>Article</header>  
+
+
+ 
+      
+    <main>
+    <div class="grid-container" id="1">
+        <div class="grid-item mainimg" id="1.1">
+            <img src="/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Images/guardian2.jpg" alt="China Miéville: ‘Without hope there’s no drive to overturn an ugly world.’ Photograph: Sarah Lee/The Guardian">
+        </div>
+        <div class="grid-item title" id="1.2">Revolution: A new era and its contradictions</div>
+        <div class="grid-item author" id="1.3">China Miéville</div>
+        <div class="grid-item excerpt" id="1.4">One hundred years ago, Lenin’s Bolshevik uprising overturned centuries of feudalism in Russia. But what does it mean for the world today?</div>
+        <div class="grid-item lt3" id="1.5" data-text></div>
+        <div class="grid-item lt4" id="1.6" data-text></div>
+    </div>
+    
+    <hr class="line2">
+    
+    <div class="grid-container" id="2">
+        <div class="grid-item lt1" id="2.1" data-text></div>
+        <div class="grid-item lt2" id="2.2" data-text></div>
+        <div class="grid-item lt3" id="2.3" data-text></div>
+        <div class="grid-item secimg" id="2.4">
+            <img src="/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Images/guardian1.jpg" alt="Vladimir Lenin addresses the crowd in Red Square in 1919. Photograph: Heritage Images/Getty Images">
+        </div>
+    </div>
+
+    <hr class="line2">
+
+    <div class="grid-container" id="3">
+        <div class="grid-item lt1" id="3.1" data-text></div>
+        <div class="grid-item st2" id="3.2" data-text></div>
+        <div class="grid-item st3" id="3.3" data-text></div>
+        <div class="grid-item lt4" id="3.4" data-text></div>
+        <div class="grid-item thiimg" id="3.5">
+            <img src="/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Images/guardian3.jpg" alt="A Communist party activist with a banner of Joseph Stalin at a May Day rally in Moscow. Photograph: Kirill Kudryavtsev/AFP/Getty Images">
+        </div>
+    </div>
+    
+    <hr class="line2">
+
+    <div class="grid-container" id="4">
+        <div class="grid-item lt1" id="4.1" data-text></div>
+        <div class="grid-item lt2" id="4.2" data-text></div>
+        <div class="grid-item lt3" id="4.3" data-text></div>
+        <div class="grid-item lt4" id="4.4" data-text></div>
+    </div>
+</main>
+
+    <br>
+    <hr class="line">
+
+      <script src="test.js"></script>
+      <script>
+        let article2 = [
+"Besides anything else, the <span class=\"highlight-politics\">socialist</span> uprising in <span class=\"highlight-location\">Russia</span> in October 1917 is an extraordinary story. The culmination of the transformative months of that year, beginning with February and the abrupt popular overthrow of <span class=\"highlight-historicalperson\">tsar Nicholas II</span> and his regime, it’s all intrigue and violence and loyalty and treachery and courage.<br>",
+"But what of that prevailing sense that these giant events occurred worlds away and eras ago? Since 1989 and the downfall of<span class=\"highlight-politics\">Stalinism</span>, mainstream culture has consigned the revolution to the tomb and celebrated its interment – thereby concurring with the spurious claim of those<span class=\"highlight-politics\">sclerotic, despotic regimes</span> draping themselves in its mantle that they represent something other than the revolution’s defeat. Are these giant events now just baleful warnings? Something else? Does the revolution even matter?<br>",
+"It matters. Because things were different once. Why could they not be again? Even as someone fascinated and inspired by the Russian revolution, of which this year is the centenary, when I am asked why it still matters, what comes to me first is hesitation. A silence. But as well as words, a key to understanding October 1917 is a certain wordlessness.<br>",
+"We may know in our marrow that it matters, but it feels defensive, sententious, dogmatic to glibly “explain” the revolution’s “relevance”: a too-quick-off-the-mark propensity to “explain” everything is not a problem of the left alone, but it’s particularly galling when coming from radicals committed, at least in principle, to rubbing history against the grain, counter-narratives, the questioning of received opinions, including their own. (One salutary impact of recent extraordinary political upsets – <span class=\"highlight-person\">Corbyn</span>, <span class=\"highlight-person\">Sanders</span>, <span class=\"highlight-person\">Trump</span>, the French presidential election, with more to come – has been the carnage of political givens, the humbling of the know-it-all.)<br>",
+"In <span class=\"highlight-location\">Russia</span>, <span class=\"highlight-person\">Putin’s</span> state knows that the revolution matters, which puts it in an odd position. Committed to<span class=\"highlight-politics\">capitalism</span> (gangster capitalism is still capitalism), it can hardly pitch itself as an inheritor of an uprising against that system: at the same time, official and semi-official nostalgia for the symbolic bric-a-brac of Great Russia, including that of<span class=\"highlight-politics\">Stalinist</span> vintage, precludes banishing the memory. It risks being, as historian <span class=\"highlight-person\">Boris Kolonitsky</span> has put it, “a very unpredictable past”.<br>",
+"On a recent trip to <span class=\"highlight-location\">St Petersburg</span>, I asked Russian friends how the government would negotiate that, if it had to. Would it remember the centenary with celebration or anathema? “They will say there was a struggle,” I was told, “and that eventually, <span class=\"highlight-location\">Russia</span> won.”<br>",
+"Another of the revolution’s many tragedies: its pertinence asserted while its substance is evacuated. A vision of global emancipation deployed as one warble in a long chauvinist blare.<br>",
+"In one sense it’s uncontroversial that 1917 matters. After all, it is recent history, and there’s no arena of the modern world not touched by its shadow. Not only in<span class=\"highlight-politics\">the social democratic parties</span>, shaped in opposition to revolutionary approaches, and their opponents of course, but at the grand scale of geopolitics, where the world’s patterns of allegiance and rivalry and the states that make up the system bear the clear traces of the revolution, its degeneration and decades of standoff. Equally, a long way from the austere realms of statecraft, the Russian avant-garde artists <span class=\"highlight-historicalperson\">Malevich</span>, <span class=\"highlight-historicalperson\">Popova</span>, <span class=\"highlight-historicalperson\">Rodchenko</span> and others remain inextricable from the revolution that so many of them embraced.<br>",
+"Theirinfluence is incalculable: the cultural critic <span class=\"highlight-person\">Owen Hatherley</span> calls<span class=\"highlight-politics\">constructivism</span> “probably the most intensive and creative art and architectural movement of the 20th century”, which influenced or anticipated “abstraction, pop art, op art, minimalism, abstract expressionism, the graphic style of punk and post-punk … brutalism, postmodernism, hi-tech and deconstructivism”. We can trace the revolution in cinema and sociology, theatre and theology, realpolitik and fashion. So of course the revolution matters. As <span class=\"highlight-historicalperson\">Lenin</span> may or may not have said: “Everything is related to everything else.”<br>",
+"But here comes hesitation again, a sense that this approach, vital as it is, is to orbit rather than interrogate the fundamental issue. Why, to put it another way, does the discussion make people angry?<br>",
+"It has become commonplace to admit that history was more tenacious than <span class=\"highlight-person\">Francis Fukuyama</span> suggested, but this is, after all, still meant to be the post-<span class=\"highlight-historicalperson\">Thatcher</span> era of TINA – there is no alternative – in which but perhaps for a diminishing tinkering space, fundamentals are not to be challenged. To even moot a system predicated on something other than profit, of grassroots control, is supposed to provoke eye-rolling, despite the increasingly sadistic deployment of austerity. So it’s precisely as a vision of an alternative, and one that had the temerity, at the start, to be successful, to overthrow the un- or not-yet assailable, that October matters. That’s why there’s anger, on all sides, rather than mere exasperation or amusement. Because what’s at stake isn’t the interpretation just of history but of the present. The question of whether it had and has to be this way.<br>",
+"What is shared by most of those who are opposed to anything but regret for 1917 is the conviction that the later excrescence of<span class=\"highlight-politics\">Stalinism</span> was the inevitable outcome of the revolution. Certainly this can be argued: for the most part, however, it is taken as more or less self-evident. Not that there’s anything approaching one monolithic anti- or pro-revolutionary perspective, which encompasses socialists of various stamps,<span class=\"highlight-politics\">liberals</span>,<span class=\"highlight-politics\">conservatives</span>,<span class=\"highlight-politics\">fascists</span> and others.<br>",
+"Some may even consider<span theclass=\"highlight-politics\">Bolsheviks</span> misguided and tragic, though wicked and power hungry is more common. There is a pull towards a crude morality tale. One can disagree with, say, historian <span class=\"highlight-person\">Orlando Figes’s</span> conclusions without querying the seriousness of his research, but his assertion in A People’s Tragedy that “hatred and indifference to human suffering were to varying degrees ingrained in the minds of all the<span class=\"highlight-politics\">Bolshevik</span> leaders” is simply absurd (and his disapproving fascination with their leather jackets curious).<br>",
+"On the other side, there are some true believers such as the minute and grotesque<span class=\"highlight-politics\">Stalin Society</span>. For the most part, however, the question for those who find cause for celebration in the revolution is, from what date do we start mourning? If an emancipatory tradition was broken, when was the break? 1921? 1924? 1928? 1930? What combination of factors lies behind the degeneration? The carnage of the civil war? Allied interventions, including, enthusiastically, on the side of the antisemitic <span class=\"highlight-politics\">pogromists</span>? The failure of revolutions in <span class=\"highlight-location\">Europe?</span><br>",
+"What’s shared is a sense of rupture, of break and loss, where<span class=\"highlight-politics\">liberalism</span> and the right see inevitability. “It is often said that ‘the germ of all<span class=\"highlight-politics\">Stalinism</span> was in<span class=\"highlight-politics\">Bolshevism</span> at its beginning’,” wrote the dissident Bolshevik <span class=\"highlight-historicalperson\">Victor Serge</span> in 1937. “Well, I have no objection. Only, Bolshevism also contained many other germs, a mass of other germs, and those who lived through the enthusiasm of the first years of the first victorious<span class=\"highlight-politics\">socialist</span> revolution ought not to forget it. To judge the living man by the death germs which the autopsy reveals in the corpse – and which he may have carried in him since his birth – is that very sensible?”<br>",
+"That excellent quote has become something of a cliche of<span class=\"highlight-politics\">anti-Stalinist socialism</span>. What sometimes escapes its enthusiasts is that Serge clears<span class=\"highlight-politics\">Bolshevism</span> of inevitably leading to<span class=\"highlight-politics\">Stalinism</span>, not of all responsibility. Any movement that avoids hagiography, that critically evaluates its own traditions, is healthy and confident. This means accounting not only for the civil war and the regime’s enforced isolation, the famine, the industrial and agricultural and social collapse, but the political degeneration within the<span class=\"highlight-politics\">Bolsheviks</span>, too, in the parlous months and years after taking power.<br>",
+"Whatever the lessons and inspiration the revolution offers, one occasionally sees a foolish kind of cosplay in the refusal to gauge all this unflinchingly, and in the desire to treat <span class=\"highlight-historicalperson\">Lenin’s</span> party of 1917 as a paradigm for today. In the discussions of some radical groups, one can even discern the influence of the eccentric cadences and vocabulary of century-old translated<span class=\"highlight-politics\">socialist</span> literature. This is not to allow the revolution to matter too much, but to matter for the wrong reasons. No such special pleading or fawning re-enactment is necessary: that isn’t fidelity. Whatever the particularities of <span class=\"highlight-location\">Russia</span> 1917, the revolution resonates now not only for the analytical insights it offers but as a horizon, the sheer fact, both bathetic and momentous, that things were other, it could be so again. That’s what connects to today’s indignities and violence and inequality and oppression and to what they bring forth, as in very different circumstances they did a century ago: an ache for a radical reconfiguration.<br>",
+"So to go back to the question: why does the revolution matter? Because of what was right about it, and what went wrong. It matters because it shows the necessity not only of hope but of appropriate pessimism, and the interrelation of the two. Without hope, that millennial drive, there’s no drive to overturn an ugly world. Without pessimism, a frank evaluation of the scale of difficulties, necessities can all too easily be recast as virtues.<br>",
+"Thus after<span class=\"highlight-historicalperson\">Lenin’s</span> death the party’s adoption of <span class=\"highlight-historicalperson\">Stalin’s</span> 1924 theory of<span ''class=\"highlight-politics\">socialism</span> in one country”. This overturned a long commitment to<span class=\"highlight-politics\">internationalism</span>, the certainty that the Russian revolution could not survive in isolation. The failure of the European revolutions provoked this – it was a shift born of despair. But announcing, ultimately celebrating an autarchic<span class=\"highlight-politics\">socialism</span> was a catastrophe. A hard-headed pessimism would have been less damaging than this bad hope.<br>",
+"The revolution also matters because it was, quite properly, millennial. Its opponents regularly charge<span class=\"highlight-politics\">socialism</span> with being a religion. The claim, of course, is hypocritical: anti-communism is just as often infused with the cultish fervour of the exorcist. And more importantly, it’s no weakness that alongside and informing their analysis, the partisans of 1917 were driven by a utopian urge, the hunger for a new and better world, to become people capable of inhabiting it.<br>",
+"All these reasons are pertinent and crucial. And all together they remain inadequate.Still there’s that frozen moment, that sense of unsayable excess. Again and again, in the revolution’s aspirations, its apocalyptic circumstances, its mistakes and successes, words fail. They fail in the near-glossolalic letters sent by soldiers to the press as the year wore on, despairing that their February revolution had been apocalypse without renewal. They fail in the equivocal leaflets of the<span class=\"highlight-politics\">Bolsheviks</span> of July 1917, when they struggled to restrain restive streets. They fail spectacularly when the party understood that its plea not to demonstrate on the streets, which they had already prepared for their paper, would be widely ignored. So late at night, to avoid embarrassment, the lines are simply cut and Pravda appears on 4 July with a blank white space in the centre of its front page.<br>",
+"This wasn’t the first printed silence on<span class=\"highlight-politics\">the Russian left</span>. Almost 60 years before the revolution, the radical writer <span class=\"highlight-historicalperson\">Nikolay Chernyshevsky</span> published What Is to Be Done?, a long political novel with an immense impact on the<span class=\"highlight-politics\">socialist</span> movement, especially on <span class=\"highlight-historicalperson\">Lenin</span>, who, in 1902, named his own seminal tract on organisation after the book. <span class=\"highlight-historicalperson\">Chernyshevsky’s</span> depiction of the hinge point, a fulcrum from history to future possibility, comprises in its entirety two rows of dots. Informed readers would understand that behind the extended ellipsis was revolution. Thus <span class=\"highlight-historicalperson\">Chernyshevsky</span> evaded the censor, but there’s something religious, too, eschatological, in this unwriting, from this<span class=\"highlight-politics\">atheist</span> son of a priest. Apophatic<span class=\"highlight-politics\">theology</span> is that which focuses on what cannot be said of God: an apophatic<span class=\"highlight-politics\">revolutionism</span>, unashamed to go beyond words.<br>",
+"In <span class=\"highlight-location\">Russia</span>, <span class=\"highlight-historicalperson\">Virginia Woolf</span> wrote in <span class=\"highlight-location\">Orlando</span>, “sentences are often left unfinished from doubt as how to best end them”. Of course this is a literary flourish, a common and unsustainable romanticised Russian<span class=\"highlight-politics\">essentialism</span>. But even so, the formulation feels prophetic for this particular Russian story. <span class=\"highlight-historicalperson\">Chernyshevsky’s</span> dots describe the revolution itself. Pravda’s blank hole contains tactics. Unsayables are by no means all there is to this strange story, but they are central to it.<br>",
+"They are key to why it matters. Because that which we can’t speak we might experience, instead. Which is why with the hesitation to answer comes a yearning. Not to say but to do and be. Not to struggle and fail to explain or to speak an October, but to be part of one.<br>",
+];
+insertArticleText(article2);
+      </script>
+    
+      <table id="metadataTable">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+    
+
+    <div id="metadataViewer">
+        <label><input type="checkbox" id="personsCheckbox"> Persons</label>
+        <label><input type="checkbox" id="historicalPersonsCheckbox"> Historical Persons</label>
+        <label><input type="checkbox" id="locationsCheckbox"> Locations</label>
+        <label><input type="checkbox" id="politicsCheckbox"> Politics</label>
+        <button onclick="highlightMetadata()">Highlight</button>
+    </div>
+    
+    
+    </body>
+    
+</html>
+  

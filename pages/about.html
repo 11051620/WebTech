@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <link rel="stylesheet" type="text/css" href="gridtest.css">
+</head>
+
+  <body>
+      <nav>
+        <ul>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/index.html">Home</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/about.html">About</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/blogs.html">Articles</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/map.html">Map</a></li>
+          <li><a href="file:///Users/TomKobes/Documents/Unibo/Courses/Web%20Technologie/documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+
+    <hr class="line">  
+    <header>
+    About
+    </header>    
+
+<!-- Theme Switcher to change the style of the website -->
+<select id="style-selector">
+  <option value="gridtest.css">Theme1</option>
+  <option value="style2.css">Theme2</option>
+</select>
+
+<!-- JavaScript code to change the website style and remember the selection -->
+<script>
+  const styleSelector = document.getElementById('style-selector');
+  const link = document.querySelector('link[rel="stylesheet"]');
+
+  // When the page loads, apply the stored theme
+  window.addEventListener('DOMContentLoaded', (event) => {
+      const savedTheme = localStorage.getItem('selectedTheme');
+      if (savedTheme) {
+          link.href = savedTheme;
+          styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
+      }
+  });
+
+  // When a new theme is selected
+  styleSelector.addEventListener('change', () => {
+      const selectedStyle = styleSelector.value;
+      link.href = selectedStyle;
+
+      // Save the theme in localStorage
+      localStorage.setItem('selectedTheme', selectedStyle);
+  });
+</script>
+
+    <div class="grid-container-gen">
+      <div class="grid-about1">
+        <p> I'm Tom, a Dutch former history student from the city of Amsterdam. Currently I'm pursuing a Master's degree in Digital Humanities and Digital Knowledge at the University of Bologna. For this website, I've chosen to explore two captivating themes: Karl Gerstner and De Stijl, two movements that, in their own unique ways, have left indelible marks on the world of creativity and webdesign.</p>
+        <p>Karl Gerstner's innovative approach to design and typography has really intrigued me. His ability to seamlessly blend artistry with technology resonates deeply with my digital journey. Conversely, De Stijl, a movement rooted in the Netherlands, holds a special place in my heart as a Dutch native. Its commitment to abstraction, simplicity, and geometric forms reflects the Dutch design philosophy that has always been very visible in the place where I am from. Thank you for visiting, I hope you enjoy my take on these two innovative and beautiful design styles</p>
+      </div>
+      <div class="grid-about2"></div>
+    </div>
+
+    <br>
+    <hr class="line">
+      <footer>
+        <p>Copyright © 2023 My Company</p>
+      </footer>
+    
+    </body>
+  </html>
