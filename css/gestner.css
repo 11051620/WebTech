@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'BQ Regular';
-    src: url('/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Fond/Gerstner BQ Regular/Gerstner BQ Regular.ttf') format('truetype');
+    src: url('assets/fonts/Gerstner BQ Regular/Gerstner BQ Regular.ttf') format('truetype');
   }
   
   h1 {
