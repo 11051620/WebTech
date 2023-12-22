@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'BQ Regular';
-    src: url('assets/fonts/Gerstner BQ Regular/Gerstner BQ Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Gerstner BQ Regular/Gerstner BQ Regular.ttf') format('truetype');
   }
   
   h1 {
