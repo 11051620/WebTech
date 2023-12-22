@@ -4,7 +4,7 @@ body {
 
 @font-face {
   font-family: 'DeStijl Regular';
-  src: url('/Users/TomKobes/Documents/Unibo/Courses/Web Technologie/Fond/DeStijl Regular/DeStijl Regular.ttf') format('truetype');
+  src: url('asset/fonts/DeStijl Regular/DeStijl Regular.ttf') format('truetype');
 }
 
 
