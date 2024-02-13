@@ -24,7 +24,14 @@
         if (savedTheme) {
             link.href = savedTheme;
             styleSelector.value = savedTheme; // Ensure the dropdown reflects the correct value
-        }
+        } else {
+          // Set a default theme if there is no saved theme
+          const defaultTheme = '../css/gestner.css'; // Specify your default theme path here
+          link.href = defaultTheme;
+          styleSelector.value = defaultTheme;
+          // Optionally save the default theme as the selected theme
+          localStorage.setItem('selectedTheme', defaultTheme);
+      }
     });
 
     // When a new theme is selected
