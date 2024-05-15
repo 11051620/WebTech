@@ -97,21 +97,6 @@ function highlightMetadata() {
       tableBody.appendChild(row);
   }
 }
-
-
-
-
-
-
-
-
-function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-  }
   
   // Listen for changes to the person checkbox
   document.getElementById('personCheckbox').addEventListener('change', function() {
