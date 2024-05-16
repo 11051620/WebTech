@@ -97,7 +97,22 @@ function highlightMetadata() {
       tableBody.appendChild(row);
   }
 }
-  
+    // Listen for changes to the person checkbox
+  document.getElementById('personsCheckbox').addEventListener('change', function() {
+    // If the checkbox is not checked
+    if (!this.checked) {
+      // Set the style of the 'highlight-person' class to be hidden
+      const highlightPersonElements = document.getElementsByClassName('highlight-person');
+      for (let i = 0; i < highlightPersonElements.length; i++) {
+        highlightPersonElements[i].style.backgroundColor = 'transparent';
+      }
+    } else {
+      // If the checkbox is checked, restore the background color
+      const highlightPersonElements = document.getElementsByClassName('highlight-person');
+      for (let i = 0; i < highlightPersonElements.length; i++) {
+        highlightPersonElements[i].style.backgroundColor = 'yellow';
+      }
+    }
 
   });
   
