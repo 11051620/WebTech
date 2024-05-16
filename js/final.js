@@ -97,8 +97,8 @@ function highlightMetadata() {
       tableBody.appendChild(row);
   }
 }
-    // Listen for changes to the person checkbox
-  document.getElementById('personsCheckbox').addEventListener('change', function() {
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('personCheckbox').addEventListener('change', function() {
     // If the checkbox is not checked
     if (!this.checked) {
       // Set the style of the 'highlight-person' class to be hidden
@@ -113,6 +113,7 @@ function highlightMetadata() {
         highlightPersonElements[i].style.backgroundColor = 'yellow';
       }
     }
-
   });
+});
+
   
