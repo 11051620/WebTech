@@ -98,7 +98,7 @@ function highlightMetadata() {
   }
 }
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('personCheckbox').addEventListener('change', function() {
+  document.getElementById('personsCheckbox').addEventListener('change', function() {
     // If the checkbox is not checked
     if (!this.checked) {
       // Set the style of the 'highlight-person' class to be hidden
